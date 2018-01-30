@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Canvas Life: An HTML5/CSS3/JavaScript implementation of Conway's Game of Life</title>
+  <meta name="description" content="A HTML5/CSS3/ECMAScript 2016 (Javascript) implementation of Conway's Game of Life.">
+  <meta name="author" content="John Doe">
+
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon7.png" />
+
+  <link rel="stylesheet" href="css/normalize.css?v=5.0.0">
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <script src="js/life.js" async defer></script>
+  <script src="js/canvaslife.js" async defer></script>
+
+  <script src="static/js/scripts2.js" async defer></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Warnes|Roboto|Yanone+Kaffeesatz" rel="stylesheet">
+</head>
+<body>
+  <div id="container-header">
+    <div id="container-header-inner">
+      <header id="header-page">
+        <span id="span-site-title"><a href="">Canvas Life</a></span>
+      </header>
+      <nav id="nav-main-menu">
+        <ul id="ul-main-menu">
+          <a href="index.html"><li>Home</li></a>
+          <a href="about/index.html"><li>About</li></a>
+          <a href="guide/index.html"><li>Guide</li></a>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <main role="main">
+    <div id="container-main">
+      <section id="section-canvas" class="width-100per padding-tb-12px">
+        <canvas id="canvas-world">Your browser does not support the Canvas element.</canvas>
+      </section>
+      <section id="section-controls" class="width-50per padding-tb-12px">
+        <div class="button-row">
+          <button type="button" id="button-run">Run</button>
+          <button type="button" id="button-step">Step</button>
+          <button type="button" id="button-clear">Clear</button>
+          <button type="button" id="button-grid">Grid Off</button>
+          <input type="range" name="fps" min="1" max="6" value="3" id="range-fps"> <span id="span-fps"></span> FPS
+        </div>
+        <div class="button-row">
+          <button type="button" id="button-rle-save">Save RLE</button>
+          <button type="button" id="button-rle-load">Load RLE</button>
+          <input type="text" name="rules" id="input-rules" class="margin-r-8px" placeholder="Enter a rule string here." value="B3/S23"> <a href="http://www.conwaylife.com/wiki/List_of_Life-like_cellular_automata" target="_blank">?</a>
+        </div>
+        <div class="button-row">
+          <textarea name="rle" id="textarea-rle" placeholder="Enter an RLE string here.">bo$2bo$3o!</textarea>
+        </div>
+        <div class="button-row">
+          <span class="margin-r-8px"><strong>Examples:</strong></span>
+          <select id="select-examples" class="margin-r-8px">
+            <option value="none">None</option>
+            <option value="title">Title</option>
+            <option value="glider">Glider</option>
+            <option value="canadaGoose">Canada Goose</option>
+            <option value="rPentomino">R-Pentomino</option>
+            <option value="line">Line</option>
+          </select>
+        </div>
+      </section>
+      <section id="section-data" class="width-50per padding-tb-12px">
+        <table id="data-table">
+          <tr>
+            <th title="Current generation of cells">Generation:</th>
+            <td><span id="span-gen">0</span></td>
+            <th title="Current mouse position (x, y)">Position:</th>
+            <td><span id="span-pos">0, 0</span></td>
+          </tr>
+          <tr>
+            <th title="Current number of living cells">Living:</th>
+            <td><span id="span-living">0</span></td>
+            <th title="Number of living cells at start of run (generation 0)">Start:</th>
+            <td><span id="span-living-start">0</span></td>
+            <th title="Maximum (Generation)">Max:</th>
+            <td><span id="span-living-max" title="Maximum number of living cells">0</span> (<span id="span-living-max-gen" title="Generation that maximum occurred">0</span>)</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>

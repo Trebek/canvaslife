@@ -1,0 +1,361 @@
+/*
+ * TODO:
+ * - Move to a mobile first design.
+ *
+ */
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    /*padding: 24px 0;*/
+    padding-bottom: 24px;
+    background: url('../images/bg4.jpg') #FFF repeat;
+    /*background: #1d1d1d;*/
+    /*color: #FFF;*/
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*header {
+    width: 900px;
+    margin: 0 auto;
+    padding: 24px 0;
+    font-family: 'dot', sans-serif;
+    font-size: 4.25em;
+    text-align: center;
+}*/
+
+
+button {
+    min-width: 64px;
+    margin: 0;
+    border: 1px solid #888;
+    border-radius: 3px;
+    padding: 6px 8px;
+    font-family: inherit;
+    background: #eee; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(238, 238, 238, 1), rgba(210 , 210, 210, 1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(238, 238, 238, 1), rgba(210 , 210, 210, 1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(238, 238, 238, 1), rgba(210 , 210, 210, 1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(238, 238, 238, 1), rgba(210, 210, 210, 1)); /* Standard syntax */
+}
+
+
+button:active {
+    background: #ddd; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(210 , 210, 210, 1), rgba(230, 230, 230, 1), rgba(210 , 210, 210, 1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(210 , 210, 210, 1), rgba(230, 230, 230, 1), rgba(210 , 210, 210, 1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(210 , 210, 210, 1), rgba(230, 230, 230, 1), rgba(210 , 210, 210, 1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(210 , 210, 210, 1), rgba(230, 230, 230, 1), rgba(210 , 210, 210, 1)); /* Standard syntax */
+}
+
+
+#container-header {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    background: #050505;
+    color: white;
+    margin-bottom: 32px;
+}
+
+
+#container-header-inner {
+    width: 960px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#header-page {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+#span-site-title {
+    font-family: 'Warnes', sans-serif;
+    font-size: 2.5em;
+    /*letter-spacing: 0.05em;*/
+}
+
+
+#span-site-title a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+#span-site-title a:hover {
+    color: #22dd22;
+}
+
+
+#nav-main-menu {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    /* justify-content: flex-start; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* line-height: 2em; */
+}
+
+
+#ul-main-menu {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    /* align-items: stretch; */
+    /* align-self: stretch; */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* height: 100%; */
+    line-height: 4.5em;
+}
+
+
+#ul-main-menu li {
+    /* height: 100%; */
+    padding: 0 24px;
+}
+
+
+#ul-main-menu li:hover {
+    background: #22dd22;
+    color: #000;
+}
+
+
+#ul-main-menu a {
+    /* height: 100%; */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    /*letter-spacing: 0.05em;*/
+}
+
+
+#ul-main-menu a:hover {
+    /*background: #8F8F8F;*/
+    background: #22dd22;
+    color: #000;
+}
+
+
+
+#container-main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+
+#section-canvas canvas {
+    cursor: pointer;
+}
+
+
+#section-controls {
+    order: 1;
+}
+
+
+#range-fps {
+    width: 80px;
+}
+
+
+#textarea-rle {
+    width: 100%;
+    height: 150px;
+}
+
+
+#select-examples {}
+
+
+#input-rules {
+    width: 50%;
+    padding: 0;
+}
+
+
+#section-data {
+    order: 0;
+}
+
+
+#section-info {
+    order: 2;
+}
+
+
+#section-rules {
+    order: 3;
+}
+
+
+.margin-r-8px {
+    margin-right: 8px;
+}
+
+
+.margin-r-16px {
+    margin-right: 16px;
+}
+
+
+.padding-tb-12px {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+
+.padding-12px {
+    padding: 12px;
+}
+
+
+.ol-rules {
+    padding-left: 18px;
+}
+
+
+.button-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+
+@media all and (min-width: 900px) {
+    body {
+        /*padding: 48px 0;*/
+        padding-bottom: 48px;
+    }
+
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-weight: normal;
+    }
+
+
+    #container-main {
+        width: 960px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+
+    #data-table {
+        text-align: left;
+    }
+
+
+    #data-table td {
+        width: auto;
+    }
+
+    #data-table td, th {
+        padding: 0 6px 0 0;
+    }
+
+
+    #section-controls {
+        width: 50%;
+        padding-top: 0;
+    }
+
+
+    #section-controls .button-row {
+        display: flex;
+        line-height: 2em;
+    }
+
+
+    #section-controls .button-row:not(:last-child) {
+        margin: 0 0 8px 0;
+    }
+
+
+    #section-controls .button-row button:not(:last-child) {
+        margin: 0 8px 0 0;
+    }
+
+
+    #section-controls #number-fps {
+        width: 64px;
+        margin-right: 8px;
+    }
+
+
+    #checkbox-grid {
+        margin: 8px 6px 0 0;
+
+    }
+
+
+    #section-data {
+        width: 50%;
+        padding-top: 0;
+    }
+
+
+    #section-info {
+        width: 50%;
+        padding-left: 0;
+    }
+
+
+    #section-rules {
+        width: 50%;
+        padding-right: 0;
+    }
+
+
+    #range-fps, #span-fps {
+        margin-right: 8px;
+    }
+
+
+    .width-100per {
+        width: 100%;
+    }
+
+
+    .width-50per {
+        width: 50%;
+    }
+}
